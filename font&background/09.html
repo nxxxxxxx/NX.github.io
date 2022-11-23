@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 500px;
+            width: 500px;
+            background-color: antiquewhite;
+            /* 设置背景图片
+            可以同时设置背景色与背景图片，背景色会同时成为图片的背景色
+            如果背景图片小于元素，图片会自动在元素中平谱将元素占满
+            如果背景图片大于元素，图片将只展示部分
+            如果背景图片等于元素，直接正常展示 */
+
+            /* background-repeat用来设置背景图片的重复方式，可选值：
+            repeat 默认值，图片沿x轴与y轴双向重复
+            repeat-x 沿x轴重复
+            repeat-y 沿y轴重复
+            no-repeat 图片不重复 */
+
+            /* background-position 用来设置背景图片的位置 
+            通过 top，left，right，bottom，center来调整
+                    使用方位词时必须指定两个值，如果只写一个默认第二个值为center
+            
+            通过设置偏移量来调整图片位置：
+                    水平方向的偏移量 垂直方向的偏移量  
+            */
+            background-image: url(./img/1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position: 10px 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
