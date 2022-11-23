@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        默认情况下父元素被内容区撑开
+
+        子元素是在父元素的内容区中排列的，
+                    如果子元素的大小超过了父元素，则子元素会从父元素中溢出
+                    使用 overflow 属性来设置父元素如何处理溢出的子元素
+
+                    可选值：
+                        visible，默认值 子元素会从父元素中溢出，在父元素外部的位置显示
+                        hidden 溢出内容将会被裁剪不会显示
+                        scroll 生成两个滚动条，通过滚动条来查看完整的内容
+                        auto 根据需要生成滚动条
+
+                overflow-x: 单独对横向调整
+                overflow-y: 单独对纵向调整
+        */
+        .box1{
+            background-color: bisque;
+            height: 100px;
+            /* overflow: auto; */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            overflow-y:auto ;
+        }
+
+        .box2{
+            height: auto;
+            width: 200px;
+            background-color: blueviolet;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">在信号处理方面我们了解了时域处理方法（如有效值、峭度）、频域处理方法（如频谱、功率谱）以及一些时频域处理方法（如小波分析）（详见专栏文章与信号处理有关的那些东东）。时域和频域有各种的优势和适用范围，就不多说了，EMD（Empirical Mode Decomposition）作为时频域的处理方法，相对于同样是时频域方法的小波分析有什么好处呢？
+
+            EMD最显著的特点，就是其克服了基函数无自适应性的问题。啥意思呢？回忆小波分析部分的内容，我们会知道小波分析是需要选定某一个小波基的，小波基的选择对整个小波分析的结果影响很大，一旦确定了小波基，在整个分析过程中将无法更换，即使该小波基在全局可能是最佳的，但在某些局部可能并不是，所以小波分析的基函数缺乏适应性。
+            
+            通俗的说，用EMD有什么好处呢？对于一段未知信号，不需要做预先分析与研究，就可以直接开始分解。这个方法会自动按照一些固模式按层次分好，而不需要人为设置和干预。
+            
+            再通俗一点，EMD就像一台机器，把一堆混在一起的硬币扔进去，他会自动按照1元、5毛、1毛、5分、1分地分成几份。
+            
+            二、内涵模态分量
+            内涵模态分量（Intrinsic Mode Functions, IMF）就是原始信号被EMD分解之后得到的各层信号分量。EMD的提出人黄锷认为，任何信号都可以拆分成若干个内涵模态分量之和。而内涵模态分量有两个约束条件：
+            
+            1）在整个数据段内，极值点的个数和过零点的个数必须相等或相差最多不能超过一个。
+            
+            2）在任意时刻，由局部极大值点形成的上包络线和由局部极小值点形成的下包络线的平均值为零，即上、下包络线相对于时间轴局部对称。</div>
+    </div>
+</body>
+</html>
